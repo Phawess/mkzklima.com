@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKZ Klima - Profesyonel Klima Çözümleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo.png" alt="MKZ Klima Logo">
+                </div>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                </label>
+                <ul class="menu">
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#urunler">Ürünler</a></li>
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="anasayfa" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>MKZ Klima ile Konforun Zirvesi</h1>
+                    <p>Profesyonel klima çözümleri ve yüksek performans</p>
+                    <a href="#urunler" class="btn btn-primary">Ürünlerimizi İncele</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="hakkimizda" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>MKZ Klima: Kalite ve Güvenin Adresi</h2>
+                        <p>20 yılı aşkın deneyimimizle, müşteri memnuniyetini her zaman ön planda tutuyoruz. Profesyonel ekibimiz ve yenilikçi çözümlerimizle sizlere en kaliteli hizmeti sunuyoruz.</p>
+                        <ul class="about-features">
+                            <li><i class="fas fa-check-circle"></i> Güvenilir Markalar</li>
+                            <li><i class="fas fa-check-circle"></i> Profesyonel Kurulum</li>
+                            <li><i class="fas fa-check-circle"></i> 7/24 Destek</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="about-image.jpg" alt="MKZ Klima Hakkında">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="urunler" class="products-section">
+            <div class="container">
+                <h2>Klima Ürünlerimiz</h2>
+                <div class="urun-listesi">
+                    <div class="urun">
+                        <div class="urun-image">
+                            <img src="klima1.jpg" alt="Inverter Klima">
+                        </div>
+                        <div class="urun-content">
+                            <h3>Inverter Klima Serisi</h3>
+                            <p>Yüksek enerji verimliliği</p>
+                            <div class="urun-details">
+                                <span class="fiyat">8.999 TL</span>
+                                <button onclick="satinAl('Inverter Klima Serisi')">
+                                    <i class="fas fa-shopping-cart"></i> Satın Al
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="urun">
+                        <div class="urun-image">
+                            <img src="klima2.jpg" alt="Duvar Tipi Klima">
+                        </div>
+                        <div class="urun-content">
+                            <h3>Duvar Tipi Klima</h3>
+                            <p>Kompakt ve sessiz performans</p>
+                            <div class="urun-details">
+                                <span class="fiyat">6.499 TL</span>
+                                <button onclick="satinAl('Duvar Tipi Klima')">
+                                    <i class="fas fa-shopping-cart"></i> Satın Al
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Diğer ürünler buraya eklenebilir -->
+                </div>
+            </div>
+        </section>
+
+        <section id="hizmetler" class="services-section">
+            <div class="container">
+                <h2>Hizmetlerimiz</h2>
+                <div class="services-grid">
+                    <div class="service">
+                        <i class="fas fa-tools"></i>
+                        <h3>Klima Kurulum</h3>
+                        <p>Profesyonel ekibimizle güvenli ve hızlı kurulum</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Bakım ve Onarım</h3>
+                        <p>Tüm klima modellerinde bakım ve onarım hizmeti</p>
+                    </div>
+                    <div class="service">
+                        <i class="fas fa-headset"></i>
+                        <h3>Teknik Destek</h3>
+                        <p>7/24 uzman teknik destek hattımız</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="iletisim" class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Bize Ulaşın</h2>
+                        <p>Sorularınız ve talepleriniz için iletişim bilgilerimiz:</p>
+                        <ul>
+                            <li><i class="fas fa-phone"></i> 0555 123 45 67</li>
+                            <li><i class="fas fa-envelope"></i> info@mkzklima.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                        </ul>
+                    </div>
+                    <div class="contact-form">
+                        <form id="iletisimFormu">
+                            <input type="text" id="ad" placeholder="Adınız Soyadınız" required>
+                            <input type="tel" id="telefon" placeholder="Telefon Numaranız" required>
+                            <input type="email" id="email" placeholder="E-Posta Adresiniz" required>
+                            <textarea id="mesaj" placeholder="Mesajınız" required></textarea>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Gönder
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="MKZ Klima Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#hakkimizda">Hakkımızda</a>
+                    <a href="#urunler">Ürünler</a>
+                    <a href="#hizmetler">Hizmetler</a>
+                    <a href="#iletisim">İletişim</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 MKZ Klima - Tüm Hakları Saklıdır
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
