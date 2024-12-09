@@ -13,7 +13,7 @@ header .menu {
     display: flex;
     justify-content: center; /* Menü öğelerini ortala */
     gap: 20px;
-    list-style: none; /* Varsayılan liste stillerini kaldır */
+    list-style: none;
     padding: 0;
     margin: 10px 0;
 }
@@ -28,13 +28,12 @@ header .menu a {
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
-    background-color: #990000; /* Koyu kırmızı arka plan */
+    background-color: #990000;
     transition: background 0.3s ease;
 }
 
 header .menu a:hover {
     background-color: #b30000;
-    color: #fff;
 }
 
 /* Hero ve diğer içerik bölümleri */
@@ -44,12 +43,12 @@ header .menu a:hover {
 .services-section,
 .contact-section {
     padding: 40px 20px;
-    text-align: center; /* Tüm içeriklerin ortalanmasını sağla */
+    text-align: center;
 }
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
-    color: #990000; /* Koyu kırmızı başlıklar */
+    color: #990000;
     margin-bottom: 20px;
 }
 
@@ -57,14 +56,14 @@ h1, h2, h3 {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto; /* Ortalamak için */
+    margin: 0 auto;
 }
 
 /* Üst menü */
 header.sticky-header {
-    background: #990000; /* Koyu kırmızı */
+    background: #990000;
     color: #fff;
-    position: fixed; /* Menü sabitleniyor */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -75,7 +74,7 @@ header.sticky-header {
 }
 
 header.sticky-header.show {
-    top: 0; /* Menü görünür */
+    top: 0;
 }
 
 /* Başlıklar ve Açıklamalar */
@@ -190,10 +189,69 @@ header.sticky-header.show {
 .contact-form button:hover {
     background: #b30000;
 }
-/* Logo */
-.logo img {
-    max-width: 120px; /* Logonun genişliğini 120px ile sınırladık */
-    height: auto;     /* Yükseklik genişliğe orantılı olarak ayarlanacak */
-    display: block;   /* Logoyu düzgün hizalamak için */
-    margin: 0 auto;   /* Ortalamak için */
+
+/* Responsive Tasarım (Telefonlar) */
+@media (max-width: 768px) {
+    /* Menü */
+    header .menu {
+        flex-direction: column; /* Menü öğelerini dikey yap */
+        align-items: center;
+    }
+
+    header .menu a {
+        padding: 10px 25px; /* Dikey menü için biraz daha fazla alan */
+    }
+
+    /* Hero bölümü */
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    /* Ürün Kartları */
+    .urun-listesi {
+        grid-template-columns: 1fr; /* Ürünleri tek sütun halinde göster */
+    }
+
+    /* Hizmetler */
+    .services-grid {
+        grid-template-columns: 1fr; /* Hizmetleri tek sütun halinde göster */
+    }
+
+    /* İletişim Formu */
+    .contact-form form {
+        padding: 15px;
+    }
+
+    /* Diğer içerikler */
+    .section-title {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    .text-block {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Küçük ekranlar için daha da küçük düzenlemeler */
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .urun-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .service h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-form button {
+        padding: 10px;
+    }
 }
